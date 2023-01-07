@@ -9,4 +9,9 @@ class ContentScanner
     false
   end
 
+  def get_file_names
+    @files = Dir.entries("target/#{@target_path}/.") - %w{. ..}
+  end
+
+
 end

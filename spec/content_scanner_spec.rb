@@ -7,4 +7,10 @@ describe 'ContentScanner' do
     expect(folder).to be_truthy
   end
 
+  it 'folder is not empty' do
+    cs = ContentScanner.new("first_folder")
+    files = cs.get_file_names
+    expect(files).to_not eql([])
+  end
+
 end
