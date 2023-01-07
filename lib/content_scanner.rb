@@ -1,0 +1,3 @@
+class ContentScanner
+end
+
