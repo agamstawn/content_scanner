@@ -13,4 +13,10 @@ describe 'ContentScanner' do
     expect(files).to_not eql([])
   end
 
+  it 'scan first folder test' do
+    cs = ContentScanner.new("first_folder")
+    files = cs.scan_folder
+    expect(files).to eql(["Hello", 3])
+  end
+
 end
