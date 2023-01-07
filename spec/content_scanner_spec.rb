@@ -25,4 +25,10 @@ describe 'ContentScanner' do
     expect(files).to eql(["Hi", 3])
   end
 
+  it 'scan third folder test with different extension' do
+    cs = ContentScanner.new("third_folder")
+    files = cs.scan_folder
+    expect(files).to eql(["Bye", 2])
+  end
+
 end
