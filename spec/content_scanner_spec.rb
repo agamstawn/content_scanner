@@ -19,4 +19,10 @@ describe 'ContentScanner' do
     expect(files).to eql(["Hello", 3])
   end
 
+  it 'scan seconf folder test get most appears same content' do
+    cs = ContentScanner.new("second_folder")
+    files = cs.scan_folder
+    expect(files).to eql(["Hi", 3])
+  end
+
 end
